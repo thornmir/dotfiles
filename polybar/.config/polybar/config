@@ -30,7 +30,7 @@ margin-bottom = 5
 [bar/primary]
 monitor = ${env:MONITOR:DP-2-1}
 monitor-fallback = ${env:MONITOR:eDP-1}
-dpi = ${xrdb:Xft.dpi:136}
+dpi = ${xrdb:Xft.dpi:100}
 bottom = true
 width = 100%
 height = 30
@@ -47,9 +47,9 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = Inconsolata:fontformat=truetype:size=10:heavy;3
-font-1 = FontAwesome:fontformat=truetype:size=10;3
-font-2 = Unifont:fontformat=truetype:size=10;3
+font-0 = Inconsolata:fontformat=truetype:size=8:heavy;3
+font-1 = FontAwesome:fontformat=truetype:size=8;3
+font-2 = Unifont:fontformat=truetype:size=8;3
 
 tray-position = right
 tray-padding = 0
@@ -58,7 +58,7 @@ tray-maxsize=24
 
 modules-left = i3 xwindow
 modules-center = 
-modules-right = music volume filesystem memory cpu wlan eth ethlocal battery1 battery2 xkeyboard date powermenu
+modules-right = volume filesystem memory cpu wlan eth battery1 battery2 xkeyboard longdate powermenu
 
 
 [bar/secondary]
@@ -66,14 +66,14 @@ inherit=bar/primary
 monitor = ${env:MONITOR:eDP-1}
 modules-left = i3 xwindow
 modules-center = 
-modules-right = weather mail temperature longwlan longeth longethlocal longdate powermenu
+modules-right = weather temperature longwlan longeth longdate powermenu
 
 
 [bar/presentation]
 inherit=bar/primary
-monitor = ${env:MONITOR:HDMI-2}
+monitor = ${env:MONITOR:VGA-1}
 modules-left = i3 xwindow
-modules-center = motd
+modules-center = #motd
 modules-right = weather volume wlan longdate
 
 
@@ -253,7 +253,7 @@ label-disconnected = 
 
 [module/eth]
 inherit = module/network
-interface = eth0
+interface = enp0s25
 
 label-connected =  %local_ip%
 label-disconnected = 
@@ -261,7 +261,7 @@ label-disconnected = 
 
 [module/ethlocal]
 inherit = module/network
-interface = enp0s31f6
+interface = enp0s25
 
 label-connected =  %local_ip%
 label-disconnected = 
@@ -269,7 +269,7 @@ label-disconnected = 
 
 [module/longeth]
 inherit = module/network
-interface = eth0
+interface = enp0s25
 
 label-connected =  %local_ip% %downspeed:8%  %upspeed:8%
 label-disconnected = 
@@ -277,7 +277,7 @@ label-disconnected = 
 
 [module/longethlocal]
 inherit = module/network
-interface = enp0s31f6
+interface = enp0s25
 
 label-connected =  %local_ip%  %downspeed:8%  %upspeed:8%
 label-disconnected = 
@@ -379,7 +379,7 @@ type = custom/menu
 
 format-spacing = 1
 
-label-open = " "
+label-open = "  "
 label-open-foreground = ${colors.pink}
 label-close =  cancel
 label-close-foreground = ${colors.pink}
@@ -412,8 +412,8 @@ format-underline = ${colors.orange}
 
 
 [module/weather]
-type = custom/script
-exec = $HOME/.config/polybar/weather.py
+type = custom/scrip
+etxec = $HOME/.config/polybar/weather.py
 interval = 60
 label =  %output%
 format-padding = 1

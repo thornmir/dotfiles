@@ -1,5 +1,5 @@
 [options]
-font = Inconsolata 13
+font = Inconsolata 8
 scrollback_lines = 1000000
 
 [colors]

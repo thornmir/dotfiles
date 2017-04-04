@@ -45,7 +45,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+s split h
+bindsym $mod+o split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -54,8 +54,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+t layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+s layout stacking
+bindsym $mod+z layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -129,8 +129,8 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 for_window [class="^.*"] border pixel 3
-gaps inner 10
-gaps outer 10
+gaps inner 7
+gaps outer 7
 smart_gaps on
 smart_borders on
 
@@ -144,13 +144,13 @@ client.background       $black
 exec --no-startup-id ~/.config/i3/local
 
 # Wallpaper
-exec_always --no-startup-id "sh -c 'sleep 1; feh --bg-fill ~/Pictures/bg.jpg'"
+exec_always --no-startup-id "nitrogen --restore"
 
 # Default lockscreen
-bindsym $mod+Tab exec "~/.config/i3/lock.sh"
+bindsym $mod+Tab exec "i3lock-fancy -p"
 
 # Autolock after 15 minutes
-exec --no-startup-id xautolock -time 15 -locker "~/.config/i3/lock.sh"
+exec --no-startup-id xautolock -time 15 -locker "i3lock-fancy -p"
 
 # Default workspace
 exec i3-msg "workspace 1; exec termite"
