@@ -13,7 +13,7 @@ set $dark_cyan #010010e6
 set $black #000000
 
 # Font
-set $font Inconsolata, FontAwesome 13
+set $font Inconsolata, FontAwesome 10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -28,9 +28,16 @@ bindsym $mod+Return exec termite
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# Allows mouse clic
+exec --no-startup-id synclient TapButton1=1
+# Allows Horizontal Two fingers scroll
+exec --no-startup-id synclient HorizTwoFingerScroll=1
+
 # start rofi
-bindsym $mod+d exec zsh -c "rofi -show run"
-bindsym $mod+Shift+d exec zsh -c "rofi -show window"
+bindsym $mod+Shift+d exec zsh -c "rofi -show run"
+
+# start firefox
+bindsym $mod+i exec--no-startup-id firefox
 
 # change focus
 bindsym $mod+h focus left
@@ -67,7 +74,7 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 # focus the child container
-bindsym $mod+z focus child
+bindsym $mod+c focus child
 
 workspace 2 output DP-2-1
 workspace 4 output DP-2-1

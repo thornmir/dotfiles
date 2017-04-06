@@ -141,13 +141,17 @@ set laststatus=2 " Status bar always visible
 set clipboard=unnamed " On windows, use the unnamed register as system
 set fileformats=unix,dos,mac
 
+" Tabs !
+set expandtab           " Insert spaces when TAB is pressed.
+set tabstop=4           " Render TABs using this many spaces.
+set shiftwidth=4        " Indentation amount for < and > commands.
+
+
 set encoding=utf-8
 set nowrap " No wrapping on the right side
 set nolinebreak "No linebreak
 set tabpagemax=20 " Max possible to open tabs with :tab all
-set tabstop=2 " Tabstop size
 set cursorline " Highlight screen line where the cursor is
-set shiftwidth=2 " Number of spaces for each step of indent
 set backspace=2 " Backspacing with all possible indents
 set expandtab " Expand tab to spaces by default
 set smartindent " Smart indenting when starting a new line
