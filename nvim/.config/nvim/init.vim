@@ -239,8 +239,8 @@ function FormatJson()
 endfunction
 
 " Custom Colorcolumn settings
-hi colorcolumn ctermbg=red ctermfg=white guibg=#592929
-set colorcolumn=81 " Make a colorcolumn for the 81st symbol
+"hi colorcolumn ctermbg=red ctermfg=white guibg=#592929
+"set colorcolumn=81 " Make a colorcolumn for the 81st symbol
 set textwidth=80 " Also automatically split at 80
 
 autocmd VimEnter * autocmd WinEnter * let w:created=1
