@@ -7,6 +7,9 @@
 [colors]
 foreground = ${colors.white}
 background = ${colors.bgblue}
+red = #af2f26
+realGreen = #82af26
+netGreen = #1caa19
 bgblue = #010024
 white = #f8f8f8
 pink = #F92672
@@ -88,12 +91,12 @@ blacklist-0 = num lock
 
 label-layout =  %layout%
 label-layout-padding = 1
-label-layout-background = ${colors.dgreen}
-label-layout-underline = ${colors.green}
+label-layout-background = ${colors.dorange}
+label-layout-underline = ${colors.dorange}
 
 label-indicator-padding = 1
-label-indicator-background = ${colors.dpink}
-label-indicator-underline = ${colors.pink}
+label-indicator-background = ${colors.dorange}
+label-indicator-underline = ${colors.dorange}
 
 
 [module/i3]
@@ -218,8 +221,8 @@ interval = 3.0
 
 format-connected = <label-connected> <ramp-signal>
 format-connected-padding = 1
-format-connected-background = ${colors.dpurple}
-format-connected-underline = ${colors.purple}
+format-connected-background = ${colors.netGreen}
+format-connected-underline = ${colors.netGreen}
 
 format-disconnected-padding = 1
 format-disconnected-background = ${colors.dpink}
@@ -292,8 +295,8 @@ time = %H:%M:%S
 
 label =  %time%
 format-padding = 1
-format-underline = ${colors.cyan}
-format-background = ${colors.dcyan}
+format-underline = ${colors.red}
+format-background = ${colors.red}
 
 
 [module/longdate]
@@ -342,13 +345,13 @@ full-at = 97
 
 format-charging = <animation-charging> <label-charging>
 format-charging-padding = 1
-format-charging-background = ${colors.dorange}
-format-charging-underline = ${colors.orange}
+format-charging-background = ${colors.realGreen}
+format-charging-underline = ${colors.realGreen}
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-padding = 1
 format-discharging-background = ${colors.dorange}
-format-discharging-underline = ${colors.orange}
+format-discharging-underline = ${colors.dorange}
 
 format-full-prefix = " "
 format-full-padding = 1
