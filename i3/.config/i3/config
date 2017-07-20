@@ -1,7 +1,7 @@
 # i3 config file (v4)
 
 # Alt
-set $mod Mod1
+set $mod Mod4
 
 # Colors
 set $white #fcfcfc

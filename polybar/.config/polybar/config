@@ -202,7 +202,7 @@ format-underline = ${colors.cyan}
 type = internal/fs
 interval = 25
 
-mount-0 = /
+mount-0 = /home
 
 label-mounted =  %free%
 format-mounted-padding = 1
