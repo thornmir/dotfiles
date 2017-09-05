@@ -32,7 +32,6 @@ ghc
 git
 gnu-netcat
 go
-gtk-theme-arc
 gtk2_prefs
 highlight
 htop
