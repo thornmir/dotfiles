@@ -74,3 +74,4 @@ alias -s go=$EDITOR
 alias -s rs=$EDITOR
 
 source ~/.local_paths
+

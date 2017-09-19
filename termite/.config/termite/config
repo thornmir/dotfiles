@@ -1,6 +1,6 @@
 # Solarized dark color scheme
 [options]
-font = Inconsolata 8
+font = Inconsolata 11
 scrollback_lines = 1000000
 
 [colors]

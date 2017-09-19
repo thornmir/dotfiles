@@ -53,9 +53,9 @@ Plug 'rust-lang/rust.vim' " Vim configuration for Rust
 Plug 'racer-rust/vim-racer' " Rust autocompletion
 "Plug 'yuttie/comfortable-motion.vim' " Smooth scrolling
 
-Plug 'a.vim' " :A for switching between src and header files
-Plug 'google.vim' " Google style guide
-Plug 'utl.vim' " Execute urls
+"Plug 'a.vim' " :A for switching between src and header files
+"Plug 'google.vim' " Google style guide
+"Plug 'utl.vim' " Execute urls
 
 call plug#end()
 
@@ -77,13 +77,14 @@ if has('gui_running')
     " Windows font
     set guifont=Consolas:h10
   elseif has('gui_macvim')
-    " Mac font + AirLine
+
     " From https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
     set guifont=Inconsolata-dz\ for\ Powerline:h10
     let g:airline_powerline_fonts=1
   else
     " Linux font
     set guifont=Inconsolata\ 9
+    "set guifont=Inconsolata-dz\ for\ Powerline:h10
   end
 
   " Remove UI

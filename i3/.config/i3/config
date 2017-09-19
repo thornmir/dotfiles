@@ -39,7 +39,17 @@ exec --no-startup-id synclient HorizTwoFingerScroll=1
 bindsym $mod+Shift+d exec zsh -c "rofi -show run"
 
 # start firefox
-bindsym $mod+i exec--no-startup-id firefox
+bindsym $mod+i exec --no-startup-id "pgrep -c firefox && i3-msg '[class=\\"Firefox\\"] focus' || firefox"
+assign [class=Firefox] 3
+
+# start spotify
+bindsym $mod+m exec --no-startup-id "pgrep -c spotify && i3-msg '[class=\\"Spotify\\"] focus' || spotify"
+assign [class=Spotify] 10
+
+bindsym $mod+space exec --no-startup-id "gkbd-keyboard-display --layout=$'fr\tbepo'"
+bindsym $mod+space --release exec "killall gkbd-keyboard-display"
+bindsym $mod+Shift+space exec --no-startup-id "xset r 65"
+bindsym $mod+Ctrl+Shift+space exec --no-startup-id "xset -r 65"
 
 # change focus
 bindsym $mod+c focus left
@@ -68,10 +78,10 @@ bindsym $mod+b layout tabbed
 bindsym $mod+p layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+! floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+! focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -152,6 +162,9 @@ client.background       $black
 
 exec --no-startup-id ~/.config/i3/local
 
+# Compositor
+exec_always--no-startup-id "compton"
+
 # Wallpaper
 exec_always --no-startup-id "nitrogen --restore"
 
@@ -167,11 +180,13 @@ exec --no-startup-id i3-msg "workspace 1"
 bindsym XF86AudioMute exec "/usr/bin/pulseaudio-ctl mute"
 bindsym XF86AudioLowerVolume exec "/usr/bin/pulseaudio-ctl down"
 bindsym XF86AudioRaiseVolume exec "/usr/bin/pulseaudio-ctl up"
-bindsym XF86AudioMicMute exec "/usr/bin/pulseaudio-ctl mute-input"
+# bindsym XF86AudioMicMute exec "/usr/bin/pulseaudio-ctl mute-input"
+bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
-bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight +5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -5 # decrease screen brightness
 
 # New mode for switching keyboard modes
 set $keyboardMode "keyboard a=fr, e=bepo"
