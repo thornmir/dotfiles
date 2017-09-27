@@ -55,6 +55,10 @@ alias vim='nvim'
 alias vi='nvim'
 export EDITOR='nvim'
 
+# Open the right terminal through i3
+export TERM='termite'
+
+
 # SSH agent should be available everywhere
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
