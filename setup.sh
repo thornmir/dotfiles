@@ -6,6 +6,7 @@ git submodule update --init --recursive
 
 # nvim
 stow nvim
+pip3 install --user neovim
 nvim +PlugInstall +qall
 
 # zsh
