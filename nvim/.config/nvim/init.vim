@@ -38,6 +38,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " Tree toggle
 Plug 'sheerun/vim-polyglot' " More syntaxes
 Plug 'solarnz/arcanist.vim' " Arcanist filetypes
 Plug 'tomasr/molokai' " Molokai color scheme
+Plug 'altercation/vim-colors-solarized' " Solarized color scheme
 Plug 'tpope/vim-fugitive' " Git functions
 Plug 'tpope/vim-obsession' " Better vim sessions
 Plug 'tpope/vim-speeddating' " Can increase dates with c-a and c-x
@@ -53,9 +54,9 @@ Plug 'rust-lang/rust.vim' " Vim configuration for Rust
 Plug 'racer-rust/vim-racer' " Rust autocompletion
 "Plug 'yuttie/comfortable-motion.vim' " Smooth scrolling
 
-Plug 'a.vim' " :A for switching between src and header files
-Plug 'google.vim' " Google style guide
-Plug 'utl.vim' " Execute urls
+"Plug 'a.vim' " :A for switching between src and header files
+"Plug 'google.vim' " Google style guide
+"Plug 'utl.vim' " Execute urls
 
 call plug#end()
 
@@ -63,7 +64,7 @@ call plug#end()
 " Sets up the specific font and color for individual system settings
 
 syntax on " Enable syntax highlighting
-colorscheme molokai " Set up my currently favored colorscheme
+colorscheme solarized " Set up my currently favored colorscheme
 " Disable terminal background for transparency goodness
 hi Normal ctermbg=none
 
@@ -77,13 +78,14 @@ if has('gui_running')
     " Windows font
     set guifont=Consolas:h10
   elseif has('gui_macvim')
-    " Mac font + AirLine
+
     " From https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
     set guifont=Inconsolata-dz\ for\ Powerline:h10
     let g:airline_powerline_fonts=1
   else
     " Linux font
     set guifont=Inconsolata\ 9
+    "set guifont=Inconsolata-dz\ for\ Powerline:h10
   end
 
   " Remove UI
@@ -241,7 +243,7 @@ endfunction
 " Custom Colorcolumn settings
 "hi colorcolumn ctermbg=red ctermfg=white guibg=#592929
 "set colorcolumn=81 " Make a colorcolumn for the 81st symbol
-set textwidth=80 " Also automatically split at 80
+"set textwidth=80 " Also automatically split at 80
 
 autocmd VimEnter * autocmd WinEnter * let w:created=1
 autocmd VimEnter * let w:created=1

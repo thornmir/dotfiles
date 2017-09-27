@@ -1,23 +1,32 @@
+# Solarized dark color scheme
 [options]
-font = Inconsolata 8
+font = Inconsolata 11
 scrollback_lines = 1000000
 
 [colors]
-foreground = #f8f8f2
-background = rgba(1, 0, 16, 0.9)
-color0 = #272822
-color1 = #f9005a
-color2 = #97e200
-color3 = #f4a63a
-color4 = #23ceef
-color5 = #8e4fff
-color6 = #6defdd
-color7 = #f9e4a4
-color8 = #75715e
-color9 = #f92672
-color10 = #a6e22e
-color11 = #f4bf75
-color12 = #66d9ef
-color13 = #ae81ff
-color14 = #a1efe4
-color15 = #f8f8f2
+foreground = #839496
+foreground_bold = #eee8d5
+#foreground_dim = #888888
+background = #002b36
+cursor = #93a1a1
+
+# if unset, will reverse foreground and background
+#highlight = #839496
+
+# colors from color0 to color254 can be set
+color0 = #073642
+color1 = #dc322f
+color2 = #859900
+color3 = #b58900
+color4 = #268bd2
+color5 = #d33682
+color6 = #2aa198
+color7 = #eee8d5
+color8 = #002b36
+color9 = #cb4b16
+color10 = #586e75
+color11 = #657b83
+color12 = #839496
+color13 = #6c71c4
+color14 = #93a1a1
+color15 = #fdf6e3

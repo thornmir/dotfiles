@@ -1,7 +1,8 @@
 # xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
-numlockx &
+# numlockx &
+xset -r 65
 xrdb ~/.Xresources
 xmodmap ~/.Xmodmap
 blueman-applet
-i3
+i3²
