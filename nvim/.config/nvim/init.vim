@@ -38,6 +38,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " Tree toggle
 Plug 'sheerun/vim-polyglot' " More syntaxes
 Plug 'solarnz/arcanist.vim' " Arcanist filetypes
 Plug 'tomasr/molokai' " Molokai color scheme
+Plug 'altercation/vim-colors-solarized' " Solarized color scheme
 Plug 'tpope/vim-fugitive' " Git functions
 Plug 'tpope/vim-obsession' " Better vim sessions
 Plug 'tpope/vim-speeddating' " Can increase dates with c-a and c-x
@@ -63,7 +64,7 @@ call plug#end()
 " Sets up the specific font and color for individual system settings
 
 syntax on " Enable syntax highlighting
-colorscheme molokai " Set up my currently favored colorscheme
+colorscheme solarized " Set up my currently favored colorscheme
 " Disable terminal background for transparency goodness
 hi Normal ctermbg=none
 
