@@ -138,7 +138,7 @@ set lazyredraw " Do not show macro expansion visually
 set showtabline=1 " Show tabs on top only if available
 set laststatus=2 " Status bar always visible
 
-set clipboard=unnamed " On windows, use the unnamed register as system
+set clipboard=unnamedplus " On windows, use the unnamed register as system
 set fileformats=unix,dos,mac
 
 " Tabs !
