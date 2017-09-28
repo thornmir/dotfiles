@@ -25,7 +25,7 @@ font pango:$font
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec $TERM
+bindsym $mod+Return exec /usr/bin/termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
