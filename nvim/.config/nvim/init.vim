@@ -38,7 +38,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " Tree toggle
 Plug 'sheerun/vim-polyglot' " More syntaxes
 Plug 'solarnz/arcanist.vim' " Arcanist filetypes
 Plug 'tomasr/molokai' " Molokai color scheme
-Plug 'altercation/vim-colors-solarized' " Solarized color scheme
+Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive' " Git functions
 Plug 'tpope/vim-obsession' " Better vim sessions
 Plug 'tpope/vim-speeddating' " Can increase dates with c-a and c-x
@@ -52,7 +52,7 @@ Plug 'xolox/vim-lua-ftplugin' " More lua completion
 Plug 'xolox/vim-misc' " Library for xolox scripts
 Plug 'rust-lang/rust.vim' " Vim configuration for Rust
 Plug 'racer-rust/vim-racer' " Rust autocompletion
-"Plug 'yuttie/comfortable-motion.vim' " Smooth scrolling
+Plug 'yuttie/comfortable-motion.vim' " Smooth scrolling
 
 "Plug 'a.vim' " :A for switching between src and header files
 "Plug 'google.vim' " Google style guide
@@ -66,6 +66,7 @@ call plug#end()
 syntax on " Enable syntax highlighting
 colorscheme solarized " Set up my currently favored colorscheme
 " Disable terminal background for transparency goodness
+set background=dark
 hi Normal ctermbg=none
 
 " }}}
@@ -479,3 +480,17 @@ let g:go_metalinter_autosave = 1
 autocmd FileType go setlocal shiftwidth=4 tabstop=4
 
 let g:rustfmt_autosave = 1
+
+" Smooth scrolling with mouse wheel
+"noremap <silent> <Down> :call comfortable_motion#flick(14)<CR>
+"noremap <silent> <Up> :call comfortable_motion#flick(-14)<CR>
+noremap <silent> <M-Down> :call comfortable_motion#flick(100)<CR>
+noremap <silent> <M-Up> :call comfortable_motion#flick(-100)<CR>
+noremap <silent> <PageDown> :call comfortable_motion#flick(100)<CR>
+noremap <silent> <PageUp> :call comfortable_motion#flick(-100)<CR>
+noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
+noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
+
+" Smooth scrillong with up and down key
+"let g:comfortable_motion_scroll_down_key = 116
+"let g:comfortable_motion_scroll_up_key = 111
