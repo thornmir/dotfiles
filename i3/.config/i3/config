@@ -177,6 +177,13 @@ exec --no-startup-id xautolock -time 15 -locker "i3lock-fancy -p"
 # Default workspace
 exec --no-startup-id i3-msg "workspace 1"
 
+# Run x-chat on startup
+exec --no-startup-id xchat-gnome
+assign [class=Xchat-gnome] 5
+
+# Run notify daemon
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
 bindsym XF86AudioMute exec "/usr/bin/pulseaudio-ctl mute"
 bindsym XF86AudioLowerVolume exec "/usr/bin/pulseaudio-ctl down"
 bindsym XF86AudioRaiseVolume exec "/usr/bin/pulseaudio-ctl up"
