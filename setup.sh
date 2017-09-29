@@ -14,9 +14,14 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 touch "$HOME/.local_paths"
 stow zsh
 
-stow polybar
-stow i3
-stow termite
-#stow ranger
+stow compton
 stow dunst
+stow fonts
+stow gtk
+stow i3
+stow nitrogen
+stow polybar
+#stow ranger
+stow rc
+stow termite
 #stow bins
