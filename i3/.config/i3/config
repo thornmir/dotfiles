@@ -181,6 +181,10 @@ exec --no-startup-id i3-msg "workspace 1"
 exec --no-startup-id xchat-gnome
 assign [class=Xchat-gnome] 5
 
+# Run telegram on startup
+exec --no-startup-id telegram
+assign [class=TelegramDesktop] 5
+
 # Run notify daemon
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
