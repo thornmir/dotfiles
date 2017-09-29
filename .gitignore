@@ -9,6 +9,7 @@ ranger/.config/ranger/tagged
 ranger/.config/ranger/colorschemes/__init__.py
 ranger/.config/ranger/colorschemes/__pycache__
 *.pyo
+nitrogen/.config/nitrogen/bg-saved.cfg
 polybar/.config/polybar/config
 polybar/.config/polybar/mail.json
 polybar/.config/polybar/weather.json
