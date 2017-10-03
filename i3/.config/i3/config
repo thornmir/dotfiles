@@ -46,6 +46,14 @@ assign [class=Firefox] 3
 bindsym $mod+m exec --no-startup-id "pgrep -c spotify && i3-msg '[class=\\"Spotify\\"] focus' || spotify"
 assign [class=Spotify] 10
 
+# Run x-chat on startup
+exec --no-startup-id hexchat
+assign [class=Hexchat] 5
+
+# Run telegram on startup
+exec --no-startup-id telegram
+assign [class=TelegramDesktop] 5
+
 bindsym $mod+space exec --no-startup-id "gkbd-keyboard-display --layout=$'fr\tbepo'"
 bindsym $mod+space --release exec "killall gkbd-keyboard-display"
 exec --no-startup-id "xset -r 65"
@@ -178,13 +186,6 @@ exec --no-startup-id xautolock -time 15 -locker "i3lock-fancy -p"
 # Default workspace
 exec --no-startup-id i3-msg "workspace 1"
 
-# Run x-chat on startup
-exec --no-startup-id hexchat
-assign [class=Hexchat] 5
-
-# Run telegram on startup
-exec --no-startup-id telegram
-assign [class=TelegramDesktop] 5
 
 # Run notify daemon
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
