@@ -1,6 +1,6 @@
 [global]
     font = Inconsolata, FontAwesome 13
-    allow_markup = yes
+    markup = yes
     # The format of the message.  Possible variables are:
     #   %a  appname
     #   %s  summary
@@ -121,7 +121,7 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = false
+    startup_notification = true
     
     # dmenu path.
     dmenu = /usr/bin/dmenu -p dunst:
@@ -135,9 +135,8 @@
     # Paths to default icons.
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
-[frame]
-    width = 2
-    color = "#A6E22E"
+    frame_width = 2
+    frame_color = "#A6E22E"
 
 [shortcuts]
     # Close notification.
