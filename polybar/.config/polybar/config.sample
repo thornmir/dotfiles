@@ -134,9 +134,9 @@ label-visible-underline = ${colors.dcyan}
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;²
-ws-icon-2 = 3;
-ws-icon-3 = 4;²
-ws-icon-4 = 5;
+ws-icon-2 = 3;
+ws-icon-3 = 4;²
+ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 6;6
 ws-icon-7 = 7;7
@@ -147,7 +147,7 @@ ws-icon-10 = 10;
 
 [module/cpu]
 type = internal/cpu
-interval = 2
+interval = 0.2
 
 label = 
 format = <label> <ramp-coreload>
@@ -245,15 +245,15 @@ interface = wlp58s0
 
 #click-left = nm-connection-editor
 label-connected = %{A1:nm-connection-editor&:} %essid%%{A}
-label-disconnected = 
+label-disconnected = %{A1:nm-connection-editor&:}%{A}
 
 
 [module/longwlan]
 inherit = module/network
 interface = wlp58s0
 
-label-connected =  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%
-label-disconnected = 
+label-connected = %{A1:nm-connection-editor&:} %essid%  %local_ip%  %downspeed:8%  %upspeed:8%%{A}
+label-disconnected = %{A1:nm-connection-editor&:}%{A}
 
 
 [module/eth]
@@ -353,7 +353,7 @@ format-charging-underline = ${colors.realGreen}
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-padding = 1
 format-discharging-background = ${colors.dorange}
-format-discharging-underline = ${colors.dorange}
+format-discharging-underline = ${colors.orange}
 
 format-full-prefix = " "
 format-full-padding = 1
@@ -378,6 +378,14 @@ ramp-capacity-4 = 
 inherit = module/battery1
 battery = BAT1
 
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format = <label>
+label = %{A1:termite:A4:xbacklight +10:A5:xbacklight -10:}  %percentage%% %{A A A}
+
+format-background = ${colors.dorange}
+format-underline = ${colors.orange}
 
 [module/powermenu]
 type = custom/menu
