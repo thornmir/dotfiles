@@ -10,4 +10,6 @@ neofetch
 polybar
 pulseaudio-ctl
 spotify
+telegram-dektop-patched
 ttf-font-awesome
+xchat-gnome-git
