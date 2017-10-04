@@ -214,7 +214,7 @@ format-unmounted-underline = ${colors.pink}
 type = internal/network
 interval = 3.0
 
-format-connected = <label-connected> <ramp-signal>
+format-connected = <label-connected>
 format-connected-padding = 1
 format-connected-background = ${colors.dnetGreen}
 format-connected-underline = ${colors.netGreen}
@@ -237,7 +237,7 @@ inherit = module/network
 interface = wlp58s0
 
 #click-left = nm-connection-editor
-label-connected = %{A1:nm-connection-editor&:} %essid%%{A}
+label-connected = %{A1:nm-connection-editor&:} %essid% <ramp-signal>%{A}
 label-disconnected = %{A1:nm-connection-editor&:}%{A}
 
 
@@ -245,7 +245,7 @@ label-disconnected = %{A1:nm-connection-editor&:}%{A}
 inherit = module/network
 interface = wlp58s0
 
-label-connected = %{A1:nm-connection-editor&:} %essid%  %local_ip%  %downspeed:8%  %upspeed:8%%{A}
+label-connected = %{A1:nm-connection-editor&:} %essid%  %local_ip%  %downspeed:8%  %upspeed:8% <ramp-signal>%{A}
 label-disconnected = %{A1:nm-connection-editor&:}%{A}
 
 
