@@ -24,4 +24,5 @@ stow polybar
 #stow ranger
 stow rc
 stow termite
+stow themes
 #stow bins
