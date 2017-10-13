@@ -142,7 +142,7 @@ type = internal/cpu
 interval = 0.2
 
 label = 
-format = %{A1:gnome-system-monitor -r:}<label> <ramp-coreload>%{A}
+format = %{A1:gnome-system-monitor -r &:}<label> <ramp-coreload>%{A}
 format-padding = 1
 format-background = ${colors.dcyan}
 format-underline = ${colors.cyan}
@@ -186,7 +186,7 @@ ramp-4 = 
 type = internal/memory
 interval = 2
 
-label = %{A1:gnome-system-monitor -r:} %percentage_used%%%{A}
+label = %{A1:gnome-system-monitor -r &:} %percentage_used%%%{A}
 format-padding = 1
 format-background = ${colors.dcyan}
 format-underline = ${colors.cyan}
@@ -198,7 +198,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{A1:baobab:} %free%%{A}
+label-mounted = %{A1:baobab &:} %free%%{A}
 format-mounted-padding = 1
 format-mounted-background = ${colors.dcyan}
 format-mounted-underline = ${colors.cyan}
@@ -236,7 +236,7 @@ inherit = module/network
 interface = wlp58s0
 
 #click-left = nm-connection-editor
-label-connected = %{A1:nm-connection-editor&:} %essid% <ramp-signal>%{A}
+label-connected = %{A1:nm-connection-editor &:} %essid% <ramp-signal>%{A}
 label-disconnected = %{A1:nm-connection-editor&:}%{A}
 
 
@@ -244,7 +244,7 @@ label-disconnected = %{A1:nm-connection-editor&:}%{A}
 inherit = module/network
 interface = wlp58s0
 
-label-connected = %{A1:nm-connection-editor&:} %essid%  %local_ip%  %downspeed:8%  %upspeed:8% <ramp-signal>%{A}
+label-connected = %{A1:nm-connection-editor &:} %essid%  %local_ip%  %downspeed:8%  %upspeed:8% <ramp-signal>%{A}
 label-disconnected = %{A1:nm-connection-editor&:}%{A}
 
 
@@ -374,7 +374,7 @@ battery = BAT1
 type = internal/backlight
 card = intel_backlight
 format = <label>
-label = %{A1:termite:A4:xbacklight +10:A5:xbacklight -10:}  %percentage%% %{A A A}
+label = %{A4:xbacklight +10 &:A5:xbacklight -10 &:}  %percentage%% %{A A A}
 
 format-background = ${colors.dorange}
 format-underline = ${colors.orange}
