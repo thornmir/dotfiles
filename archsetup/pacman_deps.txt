@@ -35,8 +35,6 @@ imagemagick
 jdk8-openjdk
 jq
 lightdm
-lightdm-gtk-greeter
-lightdm-gtk-greeter-settings
 lsof
 lxappearance
 maim

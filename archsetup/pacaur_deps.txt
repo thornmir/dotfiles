@@ -3,13 +3,13 @@ enpass-bin
 git-lfs
 grub-customizer
 hipchat
-i3-gaps-git
-i3lock-fancy
+i3-gaps-next-git
+i3lock-fancy-dualmonitors-git
 laptop-mode-tools
 neofetch
 polybar
 pulseaudio-ctl
 spotify
-telegram-dektop-patched
+telegram-desktop-patched
 ttf-font-awesome
 xchat-gnome-git
