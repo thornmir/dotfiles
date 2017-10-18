@@ -46,6 +46,10 @@ assign [class=Firefox] 3
 bindsym $mod+m exec --no-startup-id "pgrep -c spotify && i3-msg '[class=\\"Spotify\\"] focus' || spotify"
 assign [class=Spotify] 10
 
+# Start reminna with Carlos connection
+bindsym $mod+o exec --no-startup-id "pgrep -c remmina && i3-msg '[class=\\"Remmina\\"] focus' || remmina -c ~/.remmina/1505810323883.remmina"
+assign [class=Remmina] 2
+
 # Run x-chat on startup
 exec --no-startup-id hexchat
 assign [class=Hexchat] 5
