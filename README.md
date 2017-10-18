@@ -1,9 +1,8 @@
-Chaosteil's Dotfiles
+Thornmir's Dotfiles
 ====================
-
-![hackerman](http://i.imgur.com/A4s4LPo.gif)
+forked from chaosteil's dotfiles
 
 Just various config files with some setup files for quickly setting up a new
 dev environment on another computer.
 
-![environment!](https://i.imgur.com/jeFY5AH.jpg)
+Check wiki for more info on how to use and what is provided
