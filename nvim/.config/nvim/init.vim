@@ -37,7 +37,7 @@ Plug 'scrooloose/nerdcommenter' " Autocommenting
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " Tree toggle
 Plug 'sheerun/vim-polyglot' " More syntaxes
 Plug 'solarnz/arcanist.vim' " Arcanist filetypes
-Plug 'tomasr/molokai' " Molokai color scheme
+"Plug 'tomasr/molokai' " Molokai color scheme
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive' " Git functions
 Plug 'tpope/vim-obsession' " Better vim sessions
