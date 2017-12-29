@@ -58,7 +58,7 @@ font-2 = Unifont:size=8;3
 
 modules-left = i3 xwindow
 modules-center = 
-modules-right = music volume filesystem memory cpu longeth xkeyboard longdate powermenu
+modules-right = music volume filesystem memory cpu wlan battery1 xkeyboard longdate powermenu
 
 [bar/secondary]
 inherit=bar/primary
@@ -142,7 +142,8 @@ type = internal/cpu
 interval = 0.2
 
 label = 
-format = %{A1:gnome-system-monitor -r &:}<label> <ramp-coreload>%{A}
+#format = %{A1:gnome-system-monitor -r &:} <label> <ramp-coreload> %{A}
+format = <label> <ramp-coreload>
 format-padding = 1
 format-background = ${colors.dcyan}
 format-underline = ${colors.cyan}
@@ -186,7 +187,7 @@ ramp-4 = 
 type = internal/memory
 interval = 2
 
-label = %{A1:gnome-system-monitor -r &:} %percentage_used%%%{A}
+label = %{A1:gnome-system-monitor -r &:}  %percentage_used%% %{A}
 format-padding = 1
 format-background = ${colors.dcyan}
 format-underline = ${colors.cyan}
