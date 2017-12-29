@@ -8,6 +8,7 @@ audacity
 autoconf
 automake
 base-devel
+baobab
 bdf-unifont
 blueman
 bluez-firmware
@@ -42,6 +43,7 @@ mediainfo
 mesa-demos
 mpv
 neovim
+nitrogen
 noto-fonts-emoji
 npm
 numlockx
